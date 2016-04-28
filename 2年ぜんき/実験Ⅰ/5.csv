@@ -1,0 +1,9 @@
+2016/04/12 14:02:49
+Results for 50 rounds
+Rank,Robot Name,    Total Score    ,Survival,Surv Bonus,Bullet Dmg,Bullet Bonus,Ram Dmg * 2,Ram Bonus, 1sts , 2nds , 3rds 
+1st,sample.Crazy,16824 (29%),9450,1640,4901,638,194,0,41,8,0
+2nd,sample.Fire,15184 (26%),6250,240,7855,776,31,32,6,25,12
+3rd,sample.RamFire,12668 (22%),2600,0,6665,264,2575,563,0,0,11
+4th,sample.Corners,10847 (19%),4850,120,5397,465,16,0,3,16,16
+5th,sample.SittingDuck,1800 (3%),1800,0,0,0,0,0,0,1,11
+$
