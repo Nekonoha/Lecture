@@ -1,0 +1,56 @@
+h1 {
+	text-align: center;
+	color: green;
+	background-color: yellow;
+	border-style: groove;
+	border-color: green;
+	border-width: 5pt;
+	padding: 15pt;
+
+
+}
+h2 {
+	color: blue;
+	background-color: white;
+}
+li.time {
+	font-weight: bold;
+}
+table {
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	border-spacing: 0px;
+}
+caption {
+	color: purple;
+	background-color: white;
+	font-size: 1.2em;
+	font-weight: 700;
+	}
+th {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	color: white;
+	background-color: darkgreen;
+}
+td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	text-align: center;
+	color: black;
+	background-color:#f5deb3;
+}
+
+td.break {
+	color: black;
+	background-color: yellow;
+}
+
+strong{
+	color: red;
+	background-color: white;
+}
+

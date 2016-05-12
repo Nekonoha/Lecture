@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<link rel="stylesheet" type="text/css" href="./report1.css"/>
+<title>第1回課題</title>
+</head>
+<body>
+
+<h1>第1回課題</h1>
+
+<h2>採点されないレポート</h2>
+
+<p>
+以下のレポートは採点されず、未提出扱いもしくは自動的にD評価となる。
+</p>
+<ul>
+<li>W3Cが規定する正当なXHTMLで記述されていないもの（違反は1箇所でも認めない）
+<ul>
+<li>XHTML 1.1である場合は差し支えない</li>
+<li>XHTML 1.0 Strict DTD準拠が望ましいが、XHTML 1.0 Transitional DTD準拠は容認する</li>
+<li>HTML準拠になっておりXHTMLになっていないものは認めない</li>
+<li>記述したXHTMLに違反がないかどうかは提出前にW3CのValidatorを用いて確認できるので確認するように</li>
+</ul>
+</li>
+<li>提出期限に間に合わなかったもの</li>
+
+<li>提出するファイルのファイル名（拡張子も含む）が誤っているもの</li>
+<li>提出するURLが授業で指定されたものではないもの</li>
+<li>XHTMLに違反はしていないが、中身が何もないもの</li>
+</ul>
+
+<h2>Validatorについて</h2>
+<p>
+<a href="http://validator.w3.org/">http://validator.w3.org/</a>にアクセスする。<br />
+「Validate by File Upload」という項目（タブ）を選択し、「File:」欄にファイルパスを記述して「Check」ボタンを押す。<br />
+もしくは、「Validate by Direct Input」という項目（タブ）を選択し、直下にあるテキストボックスにファイルの内容をすべて貼り付けて「Check」ボタンを押す。<br />
+
+検査対象のXHTMLが次のように「successfully checked」と表示されれば、正当なXHTMLであることがわかる。<br />
+<img src="./validator1.gif" alt="This document was successfully checked as XHTML 1.0 Strict!" /><br />
+もし、次のように「Error found」と表示された場合は、記述内容が正しくないためレポートとして提出できない。無理矢理提出した場合は確実にD評価となり単位を落とす。<br />
+<img src="./validator2.gif" alt="Error found while checking this document as HTML 4.0 Transitional!" /><br />
+なお、文字コードが識別されずにValidatorによって判定が行われない場合がある。その場合は次のように「can not be checked」表示される。<br />
+<img src="./validator3.gif" alt="Sorry! This document can not be checked." /><br />
+文字コードが識別されない場合は、「Check」ボタンの上にある「More Options」を選択し、文字コードとドキュメントの形式を正しく指定するとよい。「Character Encoding」で文字コードを、「Document Type」でドキュメントの形式を指定できる。
+文字コードを指定した上で「successfully checked」と確認されたドキュメントはレポートとして提出してよい。<br />
+なお、いわゆる「機種依存文字」を使用するとValidatorがドキュメントを正しく解釈できないため、レポート中に「機種依存文字」を使用してはならない。
+</p>
+<p>
+Validatorで確認した結果、このHTMLファイルは「This document was successfully checked as XHTML 1.0 Strict!」と表示された。
+</p>
+
+<h2>XHTML準拠について</h2>
+<p>
+Validatorで確認した結果、このHTMLファイルは「This document was successfully checked as XHTML 1.0 Strict!」と表示されたため、XHTML 1.0 StrictDTDに準拠していることがわかる。<br />
+レポートファイルすべてをValidatorで検査した結果を以下のテーブルに記載する。
+</p>
+
+<table>
+<caption>Validatorでの検査結果</caption>
+<tr><td>report1.html</td><td>XHTML 1.0 StrictDTD準拠</td></tr>
+<tr><td>report2.html</td><td>XHTML 1.0 StrictDTD準拠</td></tr>
+
+<tr><td>report3.html</td><td>XHTML 1.0 StrictDTD準拠</td></tr>
+<tr><td>report4.html</td><td>XHTML 1.0 StrictDTD準拠</td></tr>
+<tr><td>report5.html</td><td>XHTML 1.0 StrictDTD準拠</td></tr>
+</table>
+
+</body>
+</html>
