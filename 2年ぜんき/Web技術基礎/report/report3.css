@@ -1,7 +1,11 @@
+body{
+	background-color:beige;
+}
+
 h1 {
 	text-align: center;
-	color: green;
-	background-color: yellow;
+	color: teal;
+	background-color:greenyellow;
 	border-style: groove;
 	border-color: green;
 	border-width: 5pt;
@@ -10,8 +14,8 @@ h1 {
 
 }
 h2 {
-	color: blue;
-	background-color: white;
+	color: darkgreen;
+	background-color: mediumseagreen;
 }
 li.time {
 	font-weight: bold;
@@ -21,10 +25,11 @@ table {
 	border-width: 3px;
 	border-color: black;
 	border-spacing: 0px;
+	paddig: 5px;
 }
 caption {
-	color: purple;
-	background-color: white;
+	color: green;
+	background-color: turquoise;
 	font-size: 1.2em;
 	font-weight: 700;
 	}

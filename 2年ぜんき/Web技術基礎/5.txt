@@ -1,0 +1,2 @@
+HTTP(HyperTextTransferProtcol)
+リクエスト/レスポンスプロトコル
