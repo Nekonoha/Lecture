@@ -25,7 +25,7 @@ table {
 	border-width: 3px;
 	border-color: black;
 	border-spacing: 0px;
-	paddig: 5px;
+	padding: 5px;
 }
 caption {
 	color: green;
@@ -59,3 +59,21 @@ strong{
 	background-color: white;
 }
 
+li.practice{
+	color: navy;
+	font-style:oblique;
+}
+
+li.meeting{
+	color: teal;
+	font-style:oblique;
+}
+
+li#game{
+	color: firebrick;
+	font-style:oblique;
+}
+
+h2#tag{
+	color:brown;
+}
