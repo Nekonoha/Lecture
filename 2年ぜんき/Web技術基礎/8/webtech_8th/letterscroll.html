@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+  <title>スクロールする文字</title>
+  <style type="text/css">
+  <!--
+  div#scrollbox {
+    width: 40em;
+    height: 1em;
+    overflow: hidden;
+  }
+  div#scrollletter {
+    width: 40em;
+    height: 1em;
+    margin-left: 0em;
+  }
+  //-->
+  </style>
+  <script type="text/javascript">
+  <!--
+    var mgn = 40;
+
+    function lscroll(name)
+    {
+      var obj = document.all && document.all(name) || document.getElementById && document.getElementById(name);
+      if(obj)
+        obj.style.marginLeft=mgn + "em";
+      mgn--;
+      if(mgn <= -20)
+        mgn = 40;
+      setTimeout('lscroll("scrollletter")', 200);
+    }
+  //-->
+  </script>
+</head>
+
+<body onload='lscroll("scrollletter")'>
+  <div id="scrollbox">
+    <div id="scrollletter">
+      ここに書かれている文字がスクロールします。
+    </div>
+  </div>
+</body>
+</html>

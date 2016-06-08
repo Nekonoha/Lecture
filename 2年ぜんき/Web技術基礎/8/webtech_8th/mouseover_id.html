@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+  <title>マウスオーバーで画像が変わる</title>
+  <script type="text/javascript">
+  <!--
+    function nakami()
+    {
+        document.getElementById("image1").src="./nakami.gif";
+    }
+    function hako()
+    {
+        document.getElementById("image1").src="./hako.gif";
+    }
+  //-->
+  </script>
+</head>
+
+<body>
+	<h3>下の箱は何かな？</h3>
+	<div>
+		<img src="./hako.gif" id="image1" alt="箱" onmouseover="nakami()" onmouseout="hako()">
+	</div>
+</body>
+</html>
