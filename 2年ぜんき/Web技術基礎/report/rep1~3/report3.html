@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="shift_jis"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link rel="stylesheet" type="text/css" href="./report3.css" />
+		<title>Web技術基礎 レポート3</title>
+	</head>
+
+	<body>
+
+		<h1>サッカー部 合宿</h1>
+
+		<!-- ※で始まる行は後で削除して良い -->
+
+		<p>
+			<!-- <strong>※ここに画像「soccer.jpg」を表示する．</strong> -->
+			<img src="./soccer.jpg" alt="" />
+			<br />
+			<b>ボールは友達！</b>
+		</p>
+
+
+		<h2>日程</h2>
+
+		<h3>5/7（土）</h3>
+		<ul>
+			<li class="meeting">ミーティング
+				<ul>
+					<li class="time">10:00-12:00</li>
+					<li>合宿の心得・グループ決め等</li>
+				</ul>
+			</li>
+			<li class="practice">基礎練習
+				<ul>
+					<li class="time">13:15-15:15</li>
+					<li>ランニング・体幹トレーニング・パス練習</li>
+				</ul>
+			</li>
+			<li id="game">4対4ゲーム
+				<ul>
+					<li class="time">15:30-17:30</li>
+					<li>4人グループになりゲーム形式で練習</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h3>5/8（日）</h3>
+
+		<ul>
+			<li class="practice">ウォーミングアップ
+				<ul>
+					<li class="time">10:00-12:00</li>
+					<li>パス・ドリブル・シュート練習</li>
+				</ul>
+			</li>
+
+			<li id="game">紅白戦
+				<ul>
+					<li class="time">13:00-17:30</li>
+					<li>2組に分かれた実戦形式の練習</li>
+				</ul>
+			</li>
+		</ul>
+
+		<!-- <p><strong>※「5/8（日）」の情報を「5/7（土）」と同じ構造のリスト形式に修正する．</strong></p> -->
+
+		<table cellspacing="0">
+			<!-- border-spacing がIE6では未サポートなため -->
+			<caption>タイムテーブル</caption>
+			<tr>
+				<th>時間</th>
+				<th>5/7（土）</th>
+				<th>5/8（日）</th>
+			</tr>
+			<tr>
+				<th>10:00-12:00</th>
+				<td>ミーティング</td>
+				<td>ウォーミングアップ</td>
+			</tr>
+			<tr>
+				<th>12:00-13:15</th>
+				<td class="break" colspan="2">昼休み</td>
+			</tr>
+			<tr>
+				<th>13:15-15:15</th>
+				<td>基礎練習</td>
+				<td rowspan="3">紅白戦</td>
+			</tr>
+			<tr>
+				<th>15:15-15:30</th>
+				<td class="break">休憩</td>
+			</tr>
+			<tr>
+				<th>15:30-17:30</th>
+				<td>4対4ゲーム</td>
+			</tr>
+		</table>
+
+		<!-- <p><strong>※「5/7（土）」の午後と「5/8（日）」の情報をテーブルに追加し， -->
+		<!-- 見本の表と同じになるようにする．</strong></p> -->
+
+		<h2>会場へのアクセス</h2>
+		<p>会場は東京工科大学です．
+			<br /> アクセス方法は
+			<a href="http://www.teu.ac.jp/campus/access/">交通案内のページ</a>をご参照ください．
+			<br />
+			<!-- <strong>※「交通案内のページ」の文字に「http://www.teu.ac.jp/campus/access/」へのリンクを設定する．</strong> -->
+		</p>
+
+
+		<hr />
+
+		<h2 id="tag">タグ解説</h2>
+
+		<h3>&lt;img&gt;タグ</h3>
+		<p>このタグは画像を表示するために用いられる． このページにおいては学園祭の絵を表示するために使用している． src属性によって画像の場所を指定し， alt属性によって画像が表示された無かった場合に表示される文字列を指定している．
+		</p>
+
+		<h3>&lt;h1&gt;タグ</h3>
+		<p>このタグは強調表示に用いられる。 このページではページの一番上の見だしに使われている。
+		</p>
+
+		<h3>&lt;h2&gt;タグ</h3>
+		<p>このタグは強調表示に用いられる。 このページではページの少し小さい見だしに使われている。
+		</p>
+
+		<h3>&lt;h3&gt;タグ</h3>
+		<p>このタグは強調表示に用いられる。 このページでは日付などに使われている。
+		</p>
+
+		<h3>&lt;a&gt;タグ</h3>
+		<p>このタグはハイパーリンクに用いられる。 このページでは交通案内のページのリンクなどに使われている。
+		</p>
+
+		<h3>&lt;p&gt;タグ</h3>
+		<p>このタグは段落に用いられる。 このページではこの文章など、ほとんどの文章に使われている。
+		</p>
+
+		<h3>&lt;hr&gt;タグ</h3>
+		<p>このタグは分の区切りに用いられる。 このページではこのタグの説明と本文の間の線がこのタグ。
+		</p>
+
+		<h3>&lt;table&gt;タグ</h3>
+		<p>このタグは表に用いられる。 &lt;tr&gt;～&lt;/tr&gt;で表の横一列、さらにその中に&lt;th&gt;～&lt;/th&gt;や、&lt;td&gt;～&lt;/td&gt;でデータを定義する。
+		</p>
+
+
+	</body>
+
+	</html>

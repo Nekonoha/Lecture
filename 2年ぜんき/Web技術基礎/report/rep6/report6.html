@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="shift_jis"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+		<title>レポート6</title>
+	</head>
+
+	<body>
+
+		<h3>出力結果</h3>
+
+		<p>
+			<script type="text/javascript">
+				<!--
+				var doc = new ActiveXObject("Microsoft.XMLDOM");
+				doc.async = false;
+				doc.load("./report6.xml");
+
+				var nodes = doc.selectNodes("/東京工科大学/学部");
+
+				// デザイン学部の要素ノードに属性ノード「キャンパス」を追加
+				var att = doc.createAttribute("キャンパス");
+				att.text = "蒲田";
+				nodes(0).attributes.setNamedItem(att);
+
+				// 医療保健学部の要素ノードに属性ノード「キャンパス」を追加
+				att = doc.createAttribute("キャンパス");
+				att.text = "蒲田";
+				nodes(1).attributes.setNamedItem(att);
+
+				// 工学部の要素ノードに属性ノード「キャンパス」を追加する。
+				att = doc.createAttribute("キャンパス");
+				att.text = "八王子";
+				nodes(2).attributes.setNamedItem(att);
+
+				// メディア学部の要素ノードに属性ノード「キャンパス」を追加する。
+				att = doc.createAttribute("キャンパス");
+				att.text = "八王子";
+				nodes(3).attributes.setNamedItem(att);
+
+				// 応用生物学部の要素ノードに属性ノード「キャンパス」を追加する。
+				att = doc.createAttribute("キャンパス");
+				att.text = "八王子";
+				nodes(4).attributes.setNamedItem(att);
+
+				// 他学部の要素ノードと同等となるように、コンピュータサイエンス学部の要素ノードを作成して追加する。
+				nodes = doc.selectNodes("/東京工科大学");
+				var elt = doc.createElement("学部");
+				elt.text = "コンピュータサイエンス";
+				att = doc.createAttribute("キャンパス");
+				att.text = "八王子";
+				elt.attributes.setNamedItem(att);
+				att = doc.createAttribute("学部長");
+				att.text = "亀田弘之";
+				elt.attributes.setNamedItem(att);
+				nodes(0).appendChild(elt);
+
+				// 各学部の名称、キャンパス、学部長を出力する。
+				nodes = doc.selectNodes("/東京工科大学/学部");
+
+				for (var i = 0; i < nodes.length; i++) {
+					document.write(nodes(i).text + "学部, ");
+					var attrs = nodes(i).selectNodes("@キャンパス");
+					document.write(attrs(0).text + "キャンパス, ");
+
+					attrs = nodes(i).selectNodes("@学部長");
+					document.write(attrs(0).text + "学部長<br />");
+				}
+
+				// 教養学環の名称、キャンパス、学環長を出力する。
+				nodes = doc.selectNodes("/東京工科大学/学環");
+
+				for (var i = 0; i < nodes.length; i++) {
+					document.write(nodes(i).text + "学環, ");
+					attrs = nodes(i).selectNodes("@学環長");
+					document.write(attrs(0).text + "学環長<br />");
+				}
+				//-->
+
+			</script>
+		</p>
+
+		<p>使用したXML（<a href="report6.xml ">report6.xml</a>）</p>
+		<hr>
+		<h3>使用したJavaScriptについて</h3>
+		<p>
+			<br/>まず、学部の属性ノードにキャンパスを追加する。
+			<br/>var att = doc.createAttribute("キャンパス");
+			<br/>次にキャンパスの値に適切なキャンパスを入力する。
+			<br/>att.text = "蒲田";
+			<br/>また、コンピュータサイエンスのテキストノードをもつ要素ノード「学部」を追加する。
+			<br/>nodes = doc.selectNodes("/東京工科大学");
+			<br/>var elt = doc.createElement("学部");
+			<br/>elt.text = "コンピュータサイエンス";
+			<br/>他学部の要素ノードと同等になるように属性ノードを付加する。
+			<br/>att = doc.createAttribute("キャンパス");
+			<br/>att.text = "八王子";
+			<br/>elt.attributes.setNamedItem(att);
+			<br/>att = doc.createAttribute("学部長");
+			<br/>att.text = "亀田弘之";
+			<br/>elt.attributes.setNamedItem(att);
+			<br/>nodes(0).appendChild(elt);
+			<br/>それぞれの値を出力する。
+			<br/>document.write(nodes(i).text + "学部, ");
+			<br/>var attrs = nodes(i).selectNodes("@キャンパス");
+			<br/>document.write(attrs(0).text + "キャンパス, ");
+			<br/>attrs = nodes(i).selectNodes("@学部長");
+			<br/>document.write(attrs(0).text + "学部長 &lt;br/&gt;");
+			<br/>学環などについても同様に出力する。
+			<br/>document.write(nodes(i).text + "学環, ");
+			<br/>attrs = nodes(i).selectNodes("@学環長");
+			<br/>document.write(attrs(0).text + "学環長&lt;br/&gt;);
+
+		</p>
+
+
+	</body>
+
+	</html>
