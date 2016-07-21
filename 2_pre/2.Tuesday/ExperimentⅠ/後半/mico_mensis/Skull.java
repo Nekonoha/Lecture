@@ -17,5 +17,10 @@ public class Skull extends Actor
     public void act() 
     {
         move(-5);
-    }    
+        checkEdge();
+    }
+    public void checkEdge(){
+        if(isAtEdge())
+        getWorld().removeObject(this);
+    }
 }

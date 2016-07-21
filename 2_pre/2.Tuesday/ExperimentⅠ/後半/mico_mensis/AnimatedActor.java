@@ -28,7 +28,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  * @author mik
  * @version 1.0
  */
-public class AnimatedActor extends Actor
+public class AnimatedActor extends Mover
 {
     private GreenfootImage[] images;
     private int currentImage = 0;

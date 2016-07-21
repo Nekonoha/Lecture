@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Runner extends AnimatedActor
 {
+    private static final int JumpStrength = 40;
+    final int startY=341;
+    static int bonusPoint=0;
     public Runner(){
         super("run",".gif",8);
     }
@@ -19,11 +22,43 @@ public class Runner extends AnimatedActor
     {
         super.act();
         move(5);
+        checkKeys();
+        checkFall();
+        if(getY()>startY)
+        setLocation(getX(),startY);
+    }
+    public void checkKeys(){
+        if(Greenfoot.isKeyDown("right")){
+            setLocation(getX()+10,getY());
+        }
+        if(Greenfoot.isKeyDown("left")){
+            setLocation(getX()-10,getY());
+        }
         if(Greenfoot.isKeyDown("space")){
-            AnimatedActor junper = new AnimatedActor("jump",".gif",10);
+            if(getY()==startY)
+            jump();
         }
-        if(isTouching(null)){
-            Greenfoot.stop();
+        if(isTouching(PowerUpItem.class)){
+            bonusPoint++;
+            Greenfoot.playSound("sounds/SE/scoreUP.mp3");
+        }else if(isTouching(null)){
+            ((MyWorld) getWorld()).gameOver();
         }
-}
+    }
+    private void jump(){
+        Greenfoot.playSound("sounds/SE/jump.mp3");
+        setVSpeed(-JumpStrength);
+        fall();
+    }
+    
+    private void checkFall(){
+        if(getY()>=startY){
+            setVSpeed(0);
+        }else{
+            fall();
+        }
+    }
+    public static int getBonusPoint(){
+        return bonusPoint;
+    }
 }

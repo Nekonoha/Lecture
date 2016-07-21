@@ -1,0 +1,10 @@
+ 参考させていただいたソースコード
+baloons				(Poul Henriksen氏)
+animation			(Michael Kolling氏)
+pengu				(Michael K旦lling氏) ←文字化けしてそう
+
+ 使用した素材
+走る棒人間			(ベクター素材無料配信) http://airy-design.net/archives/555
+DEATH TONE			(煉獄庭園)
+季節外れのSnow Snow	(煉獄庭園)
+山への憧憬			(まさみティー)

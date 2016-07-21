@@ -14,6 +14,6 @@ public class Kadai03 {
         System.out.printf("%8d \n", a);
         System.out.printf("%,08d \n", a);
         System.out.printf("%.4f \n", b); 
-        System.out.printf("%012.2f", b);
+        System.out.printf("%010.2f", b);
     }
 }

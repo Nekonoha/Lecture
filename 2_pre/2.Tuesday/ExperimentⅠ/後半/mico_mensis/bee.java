@@ -21,12 +21,16 @@ public class bee extends Actor
            //登場した位置からはじめは下に向かう
            int zengo = 3;
            //前後の動きの大きさ
-           int jouge = 5;
+           int jouge = 4;
            //上下の動きの大きさ
            setRotation(180);
            setLocation(getX() + (int)(Math.sin(a+b)*zengo), getY() + (int)(Math.sin(a)*jouge) );
            move(2);
+           checkEdge();
     }
     
-        
+        public void checkEdge(){
+        if(isAtEdge())
+        getWorld().removeObject(this);
+    }
 }
