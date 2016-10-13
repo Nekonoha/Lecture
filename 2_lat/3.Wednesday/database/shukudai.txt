@@ -1,1 +1,12 @@
 リレーショナルデータベースの商品とNoSQLの商品名をそれぞれ２つあげる
+
+
+リレーショナルデータベース
+
+Oracle Database
+Microsoft SQL Server
+
+NoSQLデータベース
+
+Apache Cassandra
+Redis

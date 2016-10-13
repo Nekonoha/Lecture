@@ -1,0 +1,24 @@
+%%
+
+(a|b|c)+	{ printf("%s\n", yytext); }
+.	{}
+%%
+
+
+---------------
+
+%{
+int wc = 0;
+%}
+
+%%
+[a-zA-Z][a-zA-Z0-9]*	{ wc++; }
+"\n"	{	}
+.	{	}
+%%
+
+int main(void){
+	yylex();
+	printf("wc=%i\n", wc);
+	return 0;
+}
